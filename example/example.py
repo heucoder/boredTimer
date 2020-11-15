@@ -1,5 +1,6 @@
 # coding:utf-8
 import sys
+import time
 sys.path.insert(0, "../")
 
 from BoredTimer import BTimer
@@ -9,7 +10,7 @@ from util1 import func33
 
 @BTimer.timethis
 def func1(*k):
-    # time.sleep(1)
+    time.sleep(1)
     print("i am func1")
 
 
@@ -23,6 +24,7 @@ def func2():
 
 
 def func4():
+    time.sleep(1.3)
     func2()
     print("i am func4")
 
