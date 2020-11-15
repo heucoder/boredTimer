@@ -1,17 +1,18 @@
+# coding:utf-8
+import sys
+sys.path.insert(0, "../")
+
 from BoredTimer import BTimer
-from util import func3
-import time
-
-btime = BTimer()
+from util2 import func3
+from util1 import func33
 
 
-@btime.timethis
+@BTimer.timethis
 def func1(*k):
-    time.sleep(1)
+    # time.sleep(1)
     print("i am func1")
 
 
-@btime.timethis
 def func2():
     func1()
     func1()
@@ -21,22 +22,23 @@ def func2():
     return x+y
 
 
-@btime.timethis
 def func4():
     func2()
     print("i am func4")
 
 
 if __name__ == "__main__":
-    btime.register(globals(), func3, func2, func1, func4)
-    # btime.register(globals(), func1, func2, func3)
+    BTimer.register(globals(), func33, func2, func1, func4)
     print("-"*30)
     func1()
     print("*"*20)
     func2()
     print("*"*20)
     func3()
+    print("*"*20)
+    func33()
     print("*"*40)
     func4()
     print("-"*30)
-    btime.show()
+    BTimer.check()
+    BTimer.show()
