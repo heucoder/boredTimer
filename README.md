@@ -4,7 +4,7 @@
 
 利用装饰器和traceback实现了一个简单的函数运行时间统计工具。
 
-![image-20201115121404236](/Users/bytedance/Library/Application Support/typora-user-images/image-20201115121404236.png)
+![image](https://github.com/heucoder/boredTimer/blob/main/Lark20201115123332.png)
 
 - 支持如下功能：
   - 支持多个模块之间调用关系
