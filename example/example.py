@@ -2,18 +2,20 @@
 import sys
 import time
 sys.path.insert(0, "../")
+sys.path.insert(0, '.')
 
 from BoredTimer import BTimer
 from util2 import func3
 from util1 import func33
 
 
-@BTimer.timethis
+# @BTimer.timethis
 def func1(*k):
     time.sleep(1)
     print("i am func1")
 
 
+@BTimer.timethis
 def func2():
     func1()
     func1()
@@ -44,3 +46,6 @@ if __name__ == "__main__":
     print("-"*30)
     BTimer.check()
     BTimer.show()
+    # for i in dir(func1.__code__):
+    #     if i.startswith("co"):
+    #         print(i+":", eval("func1.__code__."+i))
